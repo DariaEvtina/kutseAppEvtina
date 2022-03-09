@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Kuduleht";
+}
+
+<div class="jumbotron">
+    <h1>Kuste</h1>
+    <h2>@ViewBag.Greeting , kallid sõber!</h2>
+</div>
+
+<div>
+    @ViewBag.Message
+    @if (DateTime.Now.Day == 14 && DateTime.Now.Month == 02)
+    {
+        <img src="~/images/images.jpg" />
+    }
+    else if (DateTime.Now.Day == 01 && DateTime.Now.Month == 01)
+    {
+        <img src="~/images/uueaasta.jpg" />
+    }
+    else if (DateTime.Now.Day == 06 && DateTime.Now.Month == 09)
+    {
+        <img src="~/images/vilupilsa.jpg" />
+    }
+    else
+    {
+        <img src="~/images/index.jpg" />
+    }
+    <button>Meeldetuletus</button>
+    @Html.ActionLink("Kutse", "Ankeet", "Ankeet", new { @class = "btn btn-primary" })
+</div>

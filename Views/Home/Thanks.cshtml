@@ -1,0 +1,28 @@
+﻿@model kutseAppEvtina.Models.Guest
+
+@{
+    ViewBag.Title = "Aitah";
+}
+
+<h2>Aitah</h2>
+<div>
+    <p>Tanan sing, @Model.Name</p>
+</div>
+<div>
+    @if (Model.WillAttend == true)
+    {
+        @:Ootame sind kallis sõber!
+        <p>
+            <img src="~/images/index.jpg">
+        </p>
+    }
+    else
+    {
+        @:Väga kurb uudis. Näeme hiljem!
+        <p>
+            <img src="~/images/index.jpg">
+        </p>
+    }
+    @ViewBag.Message
+</div>
+
