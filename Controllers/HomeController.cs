@@ -32,7 +32,7 @@ namespace kutseAppEvtina.Controllers
                 db.Guests.Add(guest);
                 db.SaveChanges();
                 return View("thanks", guest); }
-            else { return View(); }
+            else { return View("thanks", guest); }
 
         }
         public void E_mail(Guest guest)
@@ -67,6 +67,7 @@ namespace kutseAppEvtina.Controllers
         }
         GuestContext db = new GuestContext();
         [Authorize]
+        
         public ActionResult Guests()
         {
             IEnumerable<Guest> guests = db.Guests;
@@ -83,7 +84,6 @@ namespace kutseAppEvtina.Controllers
             db.Guests.Add(guest);
             db.SaveChanges();
             return RedirectToAction("Guests");
-
         }
         [HttpGet]
         public ActionResult Delete(int id)
