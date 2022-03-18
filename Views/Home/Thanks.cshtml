@@ -15,14 +15,16 @@
         <p>
             <img src="~/images/index.jpg">
         </p>
+        <br />@Html.ActionLink("Meeldetuletus", "Meeldetuletus", "Index", new { @class = "btn btn-primary" })
     }
     else
     {
         @:Väga kurb uudis. Näeme hiljem!
         <p>
-            <img src="~/images/index.jpg">
+            <img src="~/images/images.jpg">
         </p>
     }
     @ViewBag.Message
+
 </div>
 

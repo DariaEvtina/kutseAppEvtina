@@ -86,6 +86,17 @@ namespace kutseAppEvtina.Controllers
             db.SaveChanges();
             return RedirectToAction("Guests");
         }
+        public ActionResult Meeldetuletus(Guest guest)
+        {
+            WebMail.SmtpServer = "smtp.gmail.com";
+            WebMail.SmtpPort = 587;
+            WebMail.EnableSsl = true;
+            WebMail.UserName = "programmeeriminetthk2@gmail.com";
+            WebMail.Password = "2.kuursus tarpv20";
+            WebMail.Send(guest.Email, "Meeldetuletus",  guest.Name + ", ara unusta.Pidu toimub 22.03.22! Sind ootavad väga!",
+                    null,"mangle12369zzaa@gmail.com");
+            return View();
+        }
         [HttpGet]
         public ActionResult Delete(int id)
         {

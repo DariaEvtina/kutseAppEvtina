@@ -4,10 +4,10 @@
     ViewBag.Title = "Guests";
 }
 
-<h2>Guests</h2>
+<h2>Külalised</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Loo uus", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,8 +41,8 @@
             @Html.DisplayFor(modelItem => item.WillAttend)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Muuda", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Kustuta", "Delete", new { id=item.Id })
         </td>
     </tr>
 }
