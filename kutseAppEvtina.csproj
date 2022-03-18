@@ -249,6 +249,8 @@
     <Content Include="Views\Home\Create.cshtml" />
     <Content Include="Views\Home\Edit.cshtml" />
     <Content Include="Views\Home\Meeldetuletus.cshtml" />
+    <Content Include="Views\Home\Accept.cshtml" />
+    <Content Include="Views\Home\Unaccept.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

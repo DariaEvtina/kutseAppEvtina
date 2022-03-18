@@ -1,17 +1,11 @@
 ﻿@model IEnumerable<kutseAppEvtina.Models.Guest>
 
 @{
-    ViewBag.Title = "Guests";
+    ViewBag.Title = "Unaccept";
 }
 
-<h2>Külalised</h2>
+<h2>Loobusid</h2>
 
-<p>
-    @Html.ActionLink("Loo uus", "Create")
-    <br />
-    @Html.ActionLink("Tulevad", "Accept")
-    @Html.ActionLink("Loobusid", "Unaccept")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -42,10 +36,6 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.WillAttend)
-        </td>
-        <td>
-            @Html.ActionLink("Muuda", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Kustuta", "Delete", new { id=item.Id })
         </td>
     </tr>
 }

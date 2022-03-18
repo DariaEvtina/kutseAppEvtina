@@ -88,6 +88,7 @@ namespace kutseAppEvtina.Controllers
         }
         public ActionResult Meeldetuletus(Guest guest)
         {
+            guest = db.Guests.Last();
             WebMail.SmtpServer = "smtp.gmail.com";
             WebMail.SmtpPort = 587;
             WebMail.EnableSsl = true;
@@ -140,6 +141,11 @@ namespace kutseAppEvtina.Controllers
         public ActionResult Accept()
         {
             IEnumerable<Guest> guests = db.Guests.Where(g => g.WillAttend == true);
+            return View(guests);
+        }
+        public ActionResult Unaccept()
+        {
+            IEnumerable<Guest> guests = db.Guests.Where(g => g.WillAttend == false);
             return View(guests);
         }
         //DFgasashjas3252236_
