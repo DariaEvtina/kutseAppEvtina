@@ -8,21 +8,20 @@
 {
     @Html.ValidationSummary();
     <h2>Ankeet</h2>
+    <p>Sissesta nimi: @Html.TextBoxFor(x => x.Name)</p>
+    <p>Sissesta email: @Html.TextBoxFor(x => x.Email)</p>
+    <p>Sissesta telefoni number: @Html.TextBoxFor(x => x.Phone)</p>
+    <p>
+        Sinu valik:
+        @Html.DropDownListFor(x => x.WillAttend,
+       new[]
+       {
+           new SelectListItem() {Text="Tule kindlasti!", Value=bool.TrueString},
+           new SelectListItem() {Text="Kahjuks ei saa tula!", Value=bool.FalseString}
+       }, "Vali siit")
+    </p>
+    <input type="submit" value="Saada vastus" />
+
     <h2>@ViewBag.Message</h2>
-        <p>Sissesta nimi: @Html.TextBoxFor(x => x.Name)</p>
-        <p>Sissesta email: @Html.TextBoxFor(x => x.Email)</p>
-        <p>Sissesta telefoni number: @Html.TextBoxFor(x => x.Phone)</p>
-        <p>
-            Sinu valik:
-            @Html.DropDownListFor(x => x.WillAttend,
-           new[]
-           {
-               new SelectListItem() {Text="Tule kindlasti!", Value=bool.TrueString},
-               new SelectListItem() {Text="Kahjuks ei saa tula!", Value=bool.FalseString}
-           }, "Vali siit")
-        </p>
-        <input type="submit" value="Saada vastus" />
-
-
-        }
+}
 
