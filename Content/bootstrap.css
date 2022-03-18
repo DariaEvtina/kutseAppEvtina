@@ -68,8 +68,8 @@ h1 {
   margin: 0.67em 0;
 }
 mark {
-  background: #ff0;
-  color: #000;
+    background: #ff0;
+    color: #73738c;
 }
 small {
   font-size: 80%;
@@ -193,15 +193,15 @@ th {
 }
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
-  *,
-  *:before,
-  *:after {
-    color: #000 !important;
-    text-shadow: none !important;
-    background: transparent !important;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
-  }
+    *,
+    *:before,
+    *:after {
+        color: #73738c !important;
+        text-shadow: none !important;
+        background: transparent !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
   a,
   a:visited {
     text-decoration: underline;
@@ -216,11 +216,11 @@ th {
   a[href^="javascript:"]:after {
     content: "";
   }
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
+    pre,
+    blockquote {
+        border: 1px solid #c7c7d1;
+        page-break-inside: avoid;
+    }
   thead {
     display: table-header-group;
   }
@@ -244,20 +244,20 @@ th {
   .navbar {
     display: none;
   }
-  .btn > .caret,
-  .dropup > .btn > .caret {
-    border-top-color: #000 !important;
-  }
-  .label {
-    border: 1px solid #000;
-  }
+    .btn > .caret,
+    .dropup > .btn > .caret {
+        border-top-color: #73738c !important;
+    }
+    .label {
+        border: 1px solid #73738c;
+    }
   .table {
     border-collapse: collapse !important;
   }
-  .table td,
-  .table th {
-    background-color: #fff !important;
-  }
+    .table td,
+    .table th {
+        background-color: #f1f1f4 !important;
+    }
   .table-bordered th,
   .table-bordered td {
     border: 1px solid #ddd !important;
@@ -1082,11 +1082,11 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #333333;
-  background-color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #5c5c70;
+    background-color: #c7c7d1;
 }
 input,
 button,
@@ -1100,11 +1100,11 @@ a {
   color: #337ab7;
   text-decoration: none;
 }
-a:hover,
-a:focus {
-  color: #23527c;
-  text-decoration: underline;
-}
+    a:hover,
+    a:focus {
+        color: #73738c;
+        text-decoration: underline;
+    }
 a:focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -1128,26 +1128,26 @@ img {
   border-radius: 6px;
 }
 .img-thumbnail {
-  padding: 4px;
-  line-height: 1.42857143;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  -webkit-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  display: inline-block;
-  max-width: 100%;
-  height: auto;
+    padding: 4px;
+    line-height: 1.42857143;
+    background-color: #f1f1f4;
+    border: 1px solid #9999ff;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
 }
 .img-circle {
   border-radius: 50%;
 }
 hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid #eeeeee;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #f1f1f4;
 }
 .sr-only {
   position: absolute;
@@ -1188,34 +1188,34 @@ h6,
   line-height: 1.1;
   color: inherit;
 }
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-.h1 small,
-.h2 small,
-.h3 small,
-.h4 small,
-.h5 small,
-.h6 small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small,
-.h1 .small,
-.h2 .small,
-.h3 .small,
-.h4 .small,
-.h5 .small,
-.h6 .small {
-  font-weight: 400;
-  line-height: 1;
-  color: #777777;
-}
+    h1 small,
+    h2 small,
+    h3 small,
+    h4 small,
+    h5 small,
+    h6 small,
+    .h1 small,
+    .h2 small,
+    .h3 small,
+    .h4 small,
+    .h5 small,
+    .h6 small,
+    h1 .small,
+    h2 .small,
+    h3 .small,
+    h4 .small,
+    h5 .small,
+    h6 .small,
+    .h1 .small,
+    .h2 .small,
+    .h3 .small,
+    .h4 .small,
+    .h5 .small,
+    .h6 .small {
+        font-weight: 400;
+        line-height: 1;
+        color: #9d9daf;
+    }
 h1,
 .h1,
 h2,

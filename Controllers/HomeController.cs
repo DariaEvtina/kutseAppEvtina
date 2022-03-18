@@ -27,12 +27,12 @@ namespace kutseAppEvtina.Controllers
         public ViewResult Ankeet(Guest guest)
         {
             E_mail(guest);
-            if (ModelState.IsValid)
-            {
+            /*if (ModelState.IsValid)
+            {*/
                 db.Guests.Add(guest);
                 db.SaveChanges();
-                return View("thanks", guest); }
-            else { return View("thanks", guest); }
+                return View("thanks", guest); 
+            /*else { return View(); }*/
 
         }
         public void E_mail(Guest guest)
