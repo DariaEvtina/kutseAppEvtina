@@ -45,7 +45,7 @@ namespace kutseAppEvtina.Controllers
                 WebMail.EnableSsl = true;
                 WebMail.UserName = "programmeeriminetthk2@gmail.com";
                 WebMail.Password = "2.kuursus tarpv20";
-                WebMail.Send("mangle12369zzaa@gmail.com", "Vastus Kutsele", guest.Name + " vastas " + ((guest.WillAttend ?? false) ? "tuleb peole " : "ei tule peole"));
+                WebMail.Send(guest.Email, "Vastus Kutsele", guest.Name + " vastas " + ((guest.WillAttend ?? false) ? "tuleb peole " : "ei tule peole"));
                 ViewBag.Message = "Kiri on saatnud!";
             }
             catch (Exception)
