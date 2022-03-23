@@ -1,0 +1,40 @@
+﻿@model kutseAppEvtina.Models.Holidays
+
+@{
+    ViewBag.Title = "DeleteH";
+}
+
+<h2>Kustuta</h2>
+
+<h3>Kas olete kindel, et soovite selle kustutada?</h3>
+<div>
+    <h4>Puhkuse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="kustuta" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

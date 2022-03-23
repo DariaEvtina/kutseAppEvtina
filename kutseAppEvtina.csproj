@@ -177,6 +177,7 @@
     <Compile Include="Models\Guest.cs" />
     <Compile Include="Models\GuestContext.cs" />
     <Compile Include="Models\GuestDBIntializer.cs" />
+    <Compile Include="Models\Holidays.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -251,6 +252,10 @@
     <Content Include="Views\Home\Meeldetuletus.cshtml" />
     <Content Include="Views\Home\Accept.cshtml" />
     <Content Include="Views\Home\Unaccept.cshtml" />
+    <Content Include="Views\Home\Puhkuse.cshtml" />
+    <Content Include="Views\Home\CreateH.cshtml" />
+    <Content Include="Views\Home\DeleteH.cshtml" />
+    <Content Include="Views\Home\EditH.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

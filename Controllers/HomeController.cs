@@ -23,7 +23,7 @@ namespace kutseAppEvtina.Controllers
         {
             return View();
         }
-        [HttpPost]
+
         public ViewResult Ankeet(Guest guest)
         {
             E_mail(guest);
@@ -74,6 +74,13 @@ namespace kutseAppEvtina.Controllers
             IEnumerable<Guest> guests = db.Guests;
             return View(guests);
         }
+        [Authorize]
+
+        public ActionResult Puhkuse()
+        {
+            IEnumerable<Holidays> puhkuse = db.Holidays;
+            return View(puhkuse);
+        }
         [HttpGet]
         public ActionResult Create()
         {
@@ -85,6 +92,19 @@ namespace kutseAppEvtina.Controllers
             db.Guests.Add(guest);
             db.SaveChanges();
             return RedirectToAction("Guests");
+
+        }
+        [HttpGet]
+        public ActionResult CreateH()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult CreateH(Holidays puhkuse)
+        {
+            db.Holidays.Add(puhkuse);
+            db.SaveChanges();
+            return RedirectToAction("Puhkuse");
         }
         public ActionResult Meeldetuletus(Guest guest)
         {
@@ -108,6 +128,7 @@ namespace kutseAppEvtina.Controllers
             }
             return View(g);
         }
+
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -119,6 +140,29 @@ namespace kutseAppEvtina.Controllers
             db.Guests.Remove(g);
             db.SaveChanges();
             return RedirectToAction("Guests");
+        }
+        [HttpGet]
+        public ActionResult DeleteH(int id)
+        {
+            Holidays h = db.Holidays.Find(id);
+            if (h == null)
+            {
+                return HttpNotFound();
+            }
+            return View(h);
+        }
+
+        [HttpPost, ActionName("DeleteH")]
+        public ActionResult DeleteHConfirmed(int id)
+        {
+            Holidays h = db.Holidays.Find(id);
+            if (h == null)
+            {
+                return HttpNotFound();
+            }
+            db.Holidays.Remove(h);
+            db.SaveChanges();
+            return RedirectToAction("Puhkuse");
         }
         [HttpGet]
         public ActionResult Edit(int? id)
@@ -134,8 +178,25 @@ namespace kutseAppEvtina.Controllers
         public ActionResult EditConfirmed(Guest guest)
         {
             db.Entry(guest).State = EntityState.Modified;
-            db.SaveChanges();
+            db.SaveChanges(); 
             return RedirectToAction("Guests");
+        }
+        [HttpGet]
+        public ActionResult EditH(int? id)
+        {
+            Holidays h = db.Holidays.Find(id);
+            if (h == null)
+            {
+                return HttpNotFound();
+            }
+            return View(h);
+        }
+        [HttpPost, ActionName("EditH")]
+        public ActionResult EditHConfirmed(Holidays puhkuse)
+        {
+            db.Entry(puhkuse).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Puhkuse");
         }
         [HttpGet]
         public ActionResult Accept()

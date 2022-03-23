@@ -9,5 +9,6 @@ namespace kutseAppEvtina.Models
     public class GuestContext : DbContext
     {
         public DbSet<Guest> Guests { get; set; }
+        public DbSet<Holidays> Holidays { get; set; }
     }
 }
